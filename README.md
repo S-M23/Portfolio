@@ -101,8 +101,12 @@ A linear regression model examines the relationship between weekly workout sessi
 Python is the tool being used and the steps followed are:
 
 1.	Importing libraries and loading my dataset. Includes data quality and EDA. Sklearn Linear Regression model used for analysis.
+
+
    
 2.	Define the independent variable (weekly workout duration) and dependent variable (body fat %).
+
+
 
 3.	Split data into train and test set – the dataset was split into 70% training data and 30% test i.e. 681 rows train set and 292 test set. As this is a smaller dataset, a 70/30 split has been used over 80/20.
    
@@ -117,6 +121,8 @@ y_train = df_train['Fat_Percentage']
 y_test = df_test['Fat_Percentage']
 
 ![Fig11](https://github.com/user-attachments/assets/598db1c3-06fd-43fe-86a1-05f5e143337a)
+
+
 
 4.	Create linear regression model and train with training data – after training the linear regression model and evaluating performance of trained model on the test data, the R-squared value produced is 0.589 (to 3 significant figures). 
 Intercept and coefficients of the model:
@@ -147,6 +153,8 @@ The coefficient of weekly workout duration suggests that for each additional hou
 
 The water intake coefficient suggests that for each additional litre of water intake, body fat percentage decreases by 3.60%. Research from PubMed Central around water intake suggests that ‘Drinking water can stimulate your body to break down fat without raising your blood sugar or insulin, which may also support weight loss.’ However, this may be ‘only in people of average weight and body mass index (BMI)’ (How Drinking More Water Can Help You Lose Weight, 2017). An additional analysis could be carried out to discover potential relationships between BMI, water intake and body fat % in our dataset. 
 
+
+
 5.	Make predictions using test data - Manually predicting a value using the below values for each variable: 
 Age = 31
 Height_m = 1.7
@@ -162,3 +170,48 @@ predicted_Value = 54.63 + (0.014502 * Age) + (-5.453729 * Height_m) + (-0.003598
 print(f"The predicted value is:  {predicted_Value}")
 
 Result: The predicted value is:  30.204941 #This is a prediction of body fat %.
+
+![actualvspredicted error](https://github.com/user-attachments/assets/a4a0cd92-039c-416c-af84-49e68d0e2865)
+
+
+
+6.	Evaluate model using R squared, root mean squared error (RMSE) and mean absolute percentage error (MAPE) –
+   
+R squared score: 0.589 – This can be interpreted as approximately 58.9% of the variance in body fat percentage being explained by the weekly workout duration. This leaves under half of the variance (41.1%) that is not explained by the model so other factors may be influencing body fat %.
+
+RMSE: 4.034 - on average, the predicted body fat percentages are off by about 4.034 percentage points from the actuals. This is relatively high given that the body fat % in the dataset ranges from 10% to 35%. Ideally this value should be lower for improved model reliability.
+
+MAPE: 14.71% - on average, the model's predictions are off by 14.71% from the actual body fat percentages. This models’ predictions are reasonably close to the actual values but there is still a noticeable error margin. 
+
+![Fig12](https://github.com/user-attachments/assets/201ce84f-97cb-4b33-bb71-0daf10eb63fb)
+
+Residual plot for this model:
+
+![residplot](https://github.com/user-attachments/assets/eb63638a-e046-4da8-82c4-8d8b1776ba82)
+
+The points are randomly scattered around the zero line for both train and test sets which suggests that the model is fitting the data well. The R squared scores are similar for both suggesting the model establishes well for new data.
+
+
+
+7.	Critical analysis of method
+-	Use PCA rather than removing columns with high collinearity. By doing this, other factors significantly affecting body fat % can be identified based on coefficients. P-values can help determine whether these are statistically significant.
+  
+-	This dataset is not real so potentially will be able to see more/different insights if gyms did share member workout data. For example, it may be likely those that do cardio have lower body fat % whereas this data shows a random mix.
+
+-	A larger dataset is needed to improve model accuracy and capture relationships between variables better.
+  
+-	It would be useful to run multiple linear regression models and compare the MAPE, R squared and RMSE scores in an evaluation of choosing the best model.
+
+
+
+8.	Make actionable recommendations – does this answer the research question?
+
+Workout duration does have an impact on body fat %, as does water intake. Based on this linear regression analysis, increasing weekly workout duration by one hour is associated with a 1.65% decrease in body fat percentage. Therefore, it can be recommended to incorporate an additional hour of exercise into weekly routines to help reduce body fat. 
+
+The analysis also suggests drinking more water can aid in reducing body fat, so an extra litre a day alongside increased workout duration may have an even larger impact.
+
+
+## References
+Gym Members Exercise Dataset (no date). Available at: https://www.kaggle.com/datasets/valakhorasani/gym-members-exercise-dataset (Accessed: 30 October 2024).
+
+How Drinking More Water Can Help You Lose Weight (2017) Healthline. Available at: https://www.healthline.com/nutrition/drinking-water-helps-with-weight-loss (Accessed: 31 December 2024).
