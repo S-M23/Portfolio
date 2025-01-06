@@ -2,7 +2,7 @@
 
 ![histogram](assets/images/histogram.png)
 
-Access to Project here: [Publication](https://s-m23.github.io/Portfolio/)
+Access to Project here: [Linear Regression on Gym Dataset](https://s-m23.github.io/Portfolio/)
 # Heading 1
 
 ## Heading 2
