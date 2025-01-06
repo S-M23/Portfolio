@@ -51,4 +51,4 @@ The insights taken from the results of the analysis may be useful in informing m
 ### Process
 The first step is to download the dataset and do some initial exploratory data analysis (EDA) on it. This includes assessing the data quality and visualising pairs of variables that could show potential correlation.
 
-![Fig 1 and 2](assets/images/Fig 1 and 2.jpg)
+![Fig 1 and 2](https://github.com/user-attachments/assets/9c09d6c1-a9be-4608-b59e-2b8622ab648f)
