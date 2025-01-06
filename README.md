@@ -66,4 +66,52 @@ The remaining columns after dropping those that are highly correlated:
 
 ![columnsafterdropped](https://github.com/user-attachments/assets/19a09a42-75e3-42e2-aac2-38428aaaf598)
 
+![Fig4](https://github.com/user-attachments/assets/c1dcbe04-9b88-4a5c-87d4-4aa8b16d5fd5)
+
+Box plots show distribution and identify outliers.
+
+![Fig5](https://github.com/user-attachments/assets/cbc88f2a-6aaf-40d5-aeb0-0c8c1d20dec2)
+
+Histograms show the spread of the data.
+
+![Fig 6 and 7](https://github.com/user-attachments/assets/3b8ff5b1-e046-40df-aebe-3a52348730c4)
+
+Correlation heatmap matrices show differences in correlation between different variables. 
+
+![Fig8](https://github.com/user-attachments/assets/e0f26861-3ad6-44f7-8c3b-73b62fa23c66)
+
+### Data Transformation
+I carried out some feature engineering on my dataset; I created an ‘Average_Weekly_Workout_Duration (hours)’ field by multiplying ‘Session_Duration (hours)’ by ‘Workout_Frequency (days/week)’ in my Excel file. I also created an ‘Average_Weekly_Calories_Burned’ by multiplying the ‘Calories_Burned’ by ‘Workout_Frequency (days/week)’.
+
+It is important to note that I have assumed that gym members spend the same amount of time at the gym AND do the same workouts on each of their gym sessions, therefore burning a similar amount of calories.
+
+### Data Visualisation
+There are many tools available to me to visualise the data. Excel is an obvious one where graphs can be created using different variables. Python is also a great tool to use for visualisation and allows me to keep data quality, EDA, visualisations and analysis all in one notebook. For the purposes of this project, however, AI tool Claude was initially used to create a simple dashboard as it mitigates the need to code and gives suggestions based on the dataset. There are limitations of using this tool, for example the data was interpreted to be reported over time despite no date field being available. Not many of the charts produced provided valuable insights. Therefore, Tableau was used as a more reliable tool to produce a summary of some of the fields available.
+
+#### Visuals produced by ClaudeAI:
+![Fig9](https://github.com/user-attachments/assets/7d4942ad-87df-468b-a2bd-229232872f22)
+
+As the data is not real, there aren’t many safety or privacy concerns when using emerging AI tools to interpret the data. In real life scenarios, handling sensitive data is a challenge and compliance with data protection regulations is crucial, meaning that tools such as Claude AI may not be approved of to produce quick visuals. 
+New tools in general require much staff training, and, although this uses valuable time, is essential in making the most of the investment. Tableau is used widely across my organisation, however, even after 8 years of this tool being available, staff have struggled to use it to its full potential. Although newer resources may be available, an evaluation of whether they are a right fit for the company and its employees is important to help find a balance between staying up to date with data science releases and realistic application in the workplace. 
+
+![Fig10](https://github.com/user-attachments/assets/a1c210d2-d4d6-4ee5-8ed5-84c6f4c82703)
+
+### Data Analysis
+A linear regression model examines the relationship between weekly workout session duration and body fat %.
+Python is the tool being used and the steps followed are:
+
+1.	Importing libraries and loading my dataset. Includes data quality and EDA. Sklearn Linear Regression model used for analysis.
+   
+2.	Define the independent variable (weekly workout duration) and dependent variable (body fat %).
+
+3.	Split data into train and test set – the dataset was split into 70% training data and 30% test i.e. 681 rows train set and 292 test set. As this is a smaller dataset, a 70/30 split has been used over 80/20.
+   
+The target and input variables are separated in both test and train sets so the model can learn the relationship between inputs and targets without any bias:
+
+X_train = df_train.drop('Fat_Percentage', axis=1)
+X_test = df_test.drop('Fat_Percentage', axis=1)
+
+y_train = df_train['Fat_Percentage']
+y_test = df_test['Fat_Percentage']
+
 
