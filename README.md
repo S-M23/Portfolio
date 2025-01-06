@@ -1,4 +1,4 @@
-# Portfolio
+# Linear Regression on Gym Dataset
 
 ![histogram](assets/images/histogram.png)
 
