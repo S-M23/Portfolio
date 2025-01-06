@@ -109,9 +109,12 @@ Python is the tool being used and the steps followed are:
 The target and input variables are separated in both test and train sets so the model can learn the relationship between inputs and targets without any bias:
 
 X_train = df_train.drop('Fat_Percentage', axis=1)
+
 X_test = df_test.drop('Fat_Percentage', axis=1)
 
 y_train = df_train['Fat_Percentage']
+
 y_test = df_test['Fat_Percentage']
 
+![Fig11](https://github.com/user-attachments/assets/598db1c3-06fd-43fe-86a1-05f5e143337a)
 
