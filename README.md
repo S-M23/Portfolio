@@ -146,3 +146,19 @@ Body Fat % =
 The coefficient of weekly workout duration suggests that for each additional hour of workout per week, the body fat percentage decreases by 1.65%.
 
 The water intake coefficient suggests that for each additional litre of water intake, body fat percentage decreases by 3.60%. Research from PubMed Central around water intake suggests that ‘Drinking water can stimulate your body to break down fat without raising your blood sugar or insulin, which may also support weight loss.’ However, this may be ‘only in people of average weight and body mass index (BMI)’ (How Drinking More Water Can Help You Lose Weight, 2017). An additional analysis could be carried out to discover potential relationships between BMI, water intake and body fat % in our dataset. 
+
+5.	Make predictions using test data - Manually predicting a value using the below values for each variable: 
+Age = 31
+Height_m = 1.7
+Max_BPM = 188
+Avg_BPM = 145
+Resting_BPM = 70
+Water_Intake_liters = 1.8
+BMI = 24.1
+Weekly_Workout_Duration_hours = 3
+
+predicted_Value = 54.63 + (0.014502 * Age) + (-5.453729 * Height_m) + (-0.003598 * Max_BPM) + (-0.009033 * Avg_BPM) + (-0.006301 * Resting_BPM) + (-3.598221 * Water_Intake_liters) + (-0.073089 * BMI) + (-1.645920 * Weekly_Workout_Duration_hours)
+
+print(f"The predicted value is:  {predicted_Value}")
+
+Result: The predicted value is:  30.204941 #This is a prediction of body fat %.
