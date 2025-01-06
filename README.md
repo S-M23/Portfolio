@@ -58,11 +58,8 @@ Python is another great tool to use for data quality and EDA. No nulls or duplic
 
 Correlation tables and scatter plot matrices visualise correlation between all numerical variables. A plot is easier to look at than the correlation in a table. There is high collinearity (>0.8) between session duration (hours) and calories burned. This could cause issues such as unstable coefficients where both show high sensitivity to small changes in data. It is best to remove calories burned from the dataset before proceeding, as the ‘calories burned’ column is not being used in this regression. An alternative would be to use Principal Component Analysis (PCA) to transform the correlated predictors into a set of unrelated components. 
 
-
-
-
 ![Fig4](https://github.com/user-attachments/assets/141574d6-f0d0-4dbd-b55f-b80e18171360)
-The remaining columns after dropping those that are highly correlated:
+The remaining columns after dropping those that are highly correlated.
 
 Box plots show distribution and identify outliers.
 
