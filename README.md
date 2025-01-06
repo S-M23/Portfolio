@@ -52,3 +52,20 @@ The insights taken from the results of the analysis may be useful in informing m
 The first step is to download the dataset and do some initial exploratory data analysis (EDA) on it. This includes assessing the data quality and visualising pairs of variables that could show potential correlation.
 
 ![Fig 1 and 2](https://github.com/user-attachments/assets/9c09d6c1-a9be-4608-b59e-2b8622ab648f)
+
+### Data Quality
+It’s useful to open the file in Excel and use the autofilter function and conditional formatting on each column to find any null values, incorrect formatting, and potential invalid values. A general sense check gives an idea of what the data should look like and, as a rule of thumb, these can be amended individually using different Excel features. For example, the ‘Find and Replace’ feature can identify nulls in a specified column and can be replaced with ‘0’ if that is what’s required. 
+
+Python is another great tool to use for data quality and EDA. No nulls or duplicates rows were identified in this dataset however if there were, they would be either replaced or removed.
+
+Correlation tables and scatter plot matrices visualise correlation between all numerical variables. A plot is easier to look at than the correlation in a table. There is high collinearity (>0.8) between session duration (hours) and calories burned. This could cause issues such as unstable coefficients where both show high sensitivity to small changes in data. It is best to remove calories burned from the dataset before proceeding, as the ‘calories burned’ column is not being used in this regression. An alternative would be to use Principal Component Analysis (PCA) to transform the correlated predictors into a set of unrelated components. 
+
+![Gym correlation table](https://github.com/user-attachments/assets/fcc27b91-0ea3-41e5-9862-8b61d226e69a)
+
+![Gym correlation table](https://github.com/user-attachments/assets/dc4c7ecd-6e60-4083-ba38-5e305cd00afd)
+
+The remaining columns after dropping those that are highly correlated:
+
+![Fig4](https://github.com/user-attachments/assets/141574d6-f0d0-4dbd-b55f-b80e18171360)
+
+
