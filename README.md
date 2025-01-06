@@ -19,18 +19,31 @@ The model can be rerun on real data and insights can be used to produce factual 
 The gym members dataset presents 973 rows of data, each one detailing information about different members of the gym. The data collected around these members is as follows:
 
 Age
+
 Gender
+
 Weight (kg)
+
 Height (m)
+
 Max_BPM
+
 Resting_BPM
+
 Session_Duration (hours)
+
 Calories_Burned  
+
 Workout_Type
+
 Fat_Percentage
+
 Water_Intake (liters)
+
 Workout_Frequency (days/week)
+
 Experience_Level
+
 BMI
 
 The insights taken from the results of the analysis may be useful in informing members of the public how impactful gym sessions can be on body fat %. Although this dataset is an open one and accessible at Kaggle.com (Gym Members Exercise Dataset, no date), it may be a great way to promote active lifestyle changes in members of the community. There is a potential opportunity to share statistics that may encourage people to join their local gym for their general health.
