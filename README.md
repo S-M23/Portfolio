@@ -118,3 +118,31 @@ y_test = df_test['Fat_Percentage']
 
 ![Fig11](https://github.com/user-attachments/assets/598db1c3-06fd-43fe-86a1-05f5e143337a)
 
+4.	Create linear regression model and train with training data – after training the linear regression model and evaluating performance of trained model on the test data, the R-squared value produced is 0.589 (to 3 significant figures). 
+Intercept and coefficients of the model:
+Intercept – 54.63
+Coefficients –
+
+0	Age	0.014502
+
+1	Height (m)	-5.453729
+
+2	Max_BPM	-0.003598
+
+3	Avg_BPM	-0.009033
+
+4	Resting_BPM	-0.006301
+
+5	Water_Intake (liters)	-3.598221
+
+6	BMI	-0.073089
+
+7	Weekly_Workout_Duration (hours)	-1.645920
+
+Body Fat % = 
+        54.63 + (0.014502 * Age) + (-5.453729 * Height (m)) + (-0.003598 * Max_BPM) +  (-0.009033 * Avg_BPM) + (-0.006301 * Resting_BPM) + (-3.598221 * Water_Intake (liters)) + (-0.073089 * BMI) + (-1.645920 * Weekly_Workout_Duration (hours))
+
+
+The coefficient of weekly workout duration suggests that for each additional hour of workout per week, the body fat percentage decreases by 1.65%.
+
+The water intake coefficient suggests that for each additional litre of water intake, body fat percentage decreases by 3.60%. Research from PubMed Central around water intake suggests that ‘Drinking water can stimulate your body to break down fat without raising your blood sugar or insulin, which may also support weight loss.’ However, this may be ‘only in people of average weight and body mass index (BMI)’ (How Drinking More Water Can Help You Lose Weight, 2017). An additional analysis could be carried out to discover potential relationships between BMI, water intake and body fat % in our dataset. 
