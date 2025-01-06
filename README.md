@@ -48,3 +48,5 @@ BMI
 
 The insights taken from the results of the analysis may be useful in informing members of the public how impactful gym sessions can be on body fat %. Although this dataset is an open one and accessible at Kaggle.com (Gym Members Exercise Dataset, no date), it may be a great way to promote active lifestyle changes in members of the community. There is a potential opportunity to share statistics that may encourage people to join their local gym for their general health.
 
+### Process
+The first step is to download the dataset and do some initial exploratory data analysis (EDA) on it. This includes assessing the data quality and visualising pairs of variables that could show potential correlation.
