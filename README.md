@@ -62,9 +62,9 @@ Correlation tables and scatter plot matrices visualise correlation between all n
 
 ![Gym correlation table](https://github.com/user-attachments/assets/fcc27b91-0ea3-41e5-9862-8b61d226e69a)
 
-![Gym correlation table](https://github.com/user-attachments/assets/dc4c7ecd-6e60-4083-ba38-5e305cd00afd)
-
 The remaining columns after dropping those that are highly correlated:
+![columnsafterdropped](https://github.com/user-attachments/assets/7cfd43b8-5e95-4bdc-8654-dee01188710f)
+
 
 ![Fig4](https://github.com/user-attachments/assets/141574d6-f0d0-4dbd-b55f-b80e18171360)
 
