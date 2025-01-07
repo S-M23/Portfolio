@@ -189,7 +189,7 @@ Residual plot for this model:
 
 ![residplot](https://github.com/user-attachments/assets/eb63638a-e046-4da8-82c4-8d8b1776ba82)
 
-The points are randomly scattered around the zero line for both train and test sets which suggests that the model is fitting the data well. The R squared scores are similar for both suggesting the model establishes well for new data.
+The points are randomly scattered around the zero line for both train and test sets which suggests that the model is fitting the data well. The R squared scores are similar for both suggesting the model establishes well for new data. 
 
 
 
